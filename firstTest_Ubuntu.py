@@ -67,3 +67,5 @@ history = model.fit_generator(train_generator,
                               epochs=10,
                               validation_data=validation_generator,
                               validation_steps=30)
+# save the final model
+model.save('cats_and_dogs_small_1.h5')
