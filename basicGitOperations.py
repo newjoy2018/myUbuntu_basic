@@ -21,4 +21,9 @@ git checkout test	# change to other branch
 git checkout master # change to the main/first/default branch
 git merge test		# merge changes in test(branch) to master(branch)
 git branch -d test	# delete test(branch)
+git status		# check the status of git
+git diff		# show the differences
+git diff --cached	# show the differences not cached
+git diff HEAD
+git diff --stat
 #-------------------------------------------------------------------------------------------#
