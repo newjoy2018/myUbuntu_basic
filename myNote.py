@@ -15,6 +15,10 @@ git push origin master
 #-----------------------------------
 
 git clone ssh://example.com/~/www/project.git	# clone from remote
+wget http://www.minjieren.com/wordpress-3.1-zh_CN.zip # 下载单个文件
+wget -O wordpress.zip http://www.minjieren.com/download.aspx?id=1080 #下载并重命名
+
+
 git push origin master			# here origin is remote repo, master is local repo
 git push ssh://example.com/~/www/project.git	# push the current local repo
 git pull	# merge the remote repo
@@ -26,6 +30,17 @@ git checkout test	# change to other branch
 git checkout master # change to the main/first/default branch
 git merge test		# merge changes in test(branch) to master(branch)
 git branch -d test	# delete test(branch)
+
+#-----下载多个文件------------------------------
+$cat > filelist.txt
+url1
+url2
+url3
+url4
+
+$wget -i filelist.txt
+#-----------------------------------
+wget -r -A.pdf url #下载一个网站所有同类型文件
 #-------------------------------------------------------------------------------------------#
 #-----About SSH-----#
 ssh-keygen -t rsa -b 4096 -C "your_email@example.com"	#generate a new ssh key
