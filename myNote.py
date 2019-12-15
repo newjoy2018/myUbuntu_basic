@@ -66,4 +66,12 @@ which jupyter
 conda install jupyter
 conda install ipython
 #-------------------------------------------------------------------------------------------#
+#-------------------------------------------------------------------------------------------#
+# Model Visualization
+from keras.utils import plot_model
+plot_model(model, to_file='model.png')  # outout a png.
 
+from IPython.display import SVG         # directly display
+from keras.utils.vis_utils import model_to_dot
+SVG(model_to_dot(model).create(prog='dot', format='svg'))
+#-------------------------------------------------------------------------------------------#
